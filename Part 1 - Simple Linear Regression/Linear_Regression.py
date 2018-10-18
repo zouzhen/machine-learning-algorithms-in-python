@@ -132,3 +132,10 @@ ax.set_xlabel('Population')
 ax.set_ylabel('Profit')
 ax.set_title('Predicted Profit vs. Population Size')
 plt.show()
+
+
+fig, ax = plt.subplots(figsize=(12,8))
+ax.plot(np.arange(iters), cost, 'r')
+ax.set_xlabel('Iterations')
+ax.set_ylabel('Cost')
+ax.set_title('Error vs. Training Epoch')
