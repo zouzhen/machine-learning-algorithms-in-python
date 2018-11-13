@@ -123,14 +123,14 @@ class LeNet(nn.Module):
 
         # 第一层神经网络，包括卷积层、线性激活函数、池化层
         self.conv1 = nn.Sequential( 
-            nn.Conv2d(3, 6, 5, 1, 2),   # input_size=(3*256*256)，padding=2
+            nn.Conv2d(3, 32, 5, 1, 2),   # input_size=(3*256*256)，padding=2
             nn.ReLU(),                  # input_size=(32*256*256)
             nn.MaxPool2d(kernel_size=2, stride=2),  # output_size=(32*128*128)
         )
 
         # 第二层神经网络，包括卷积层、线性激活函数、池化层
         self.conv2 = nn.Sequential(
-            nn.Conv2d(6, 64, 5, 1, 2),  # input_size=(32*128*128)
+            nn.Conv2d(32, 64, 5, 1, 2),  # input_size=(32*128*128)
             nn.ReLU(),            # input_size=(64*128*128)
             nn.MaxPool2d(2, 2)    # output_size=(64*64*64)
         )
